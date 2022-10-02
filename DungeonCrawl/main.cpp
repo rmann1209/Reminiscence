@@ -223,10 +223,14 @@ int main() {
 			gameOver = true;
 			break;
 		}
-		else {
+		else if(userIn == 1) {
 			currentRoom = decideNextEncounter(battleChance, lootChance, merchantLevel, level);
 			cout << "Current Room: " << currentRoom << endl;
 			cout << "Level: " << level << endl << endl;
+		}
+		else if (userIn == 2) {
+			cout << "FIXME: DISPLAY INVENTORY" << endl;
+			continue;
 		}
 
 		if (currentRoom == "Battle") {
